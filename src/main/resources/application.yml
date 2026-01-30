@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smartbook
+    username: smartbook
+    password: smartbook
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+
+security:
+  jwt:
+    secret: "super-secret-change-me-super-secret-change-me"
+    accessTokenMinutes: 60
+    refreshTokenMinutes: 43200
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
